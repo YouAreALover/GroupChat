@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="js/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/chat.css">
+<head>
+    <meta charset="UTF-8">
+    <title>群聊</title>
+</head>
+<body bgcolor="#222222" style="font-family: Consolas;">
+<!--聊天容器-->
+<div id="chat-container">
+    <!--头部提示信息-->
+    <div id="header">刷题吧匿名公聊</div>
+    <!--消息面板-->
+    <div id="message"></div>
+    <!--消息控制-->
+    <div id="chat-control">
+        <!--输入框-->
+        <input type="text" id="messageContent" placeholder="你的聊天不会被记录，你可以畅所欲言" style="font-family: Consolas;"/>
+        <!--发送按钮-->
+        <span id="send">发送</span>
+    </div>
+</div>
+<div class="introduce">
+    说明: <br><br>
+    ◆ 请使用谷歌浏览器，如果遇到收不到消息的情况，刷新浏览器即可<br><br>
+    ◆ 尽量不要使用手机访问，未做手机兼容<br><br>
+    ◆ 每一个浏览器会随机分配一个匿名身份和头像，使用Cookie保存，如果想要换一个名字，清理一下Cookie即可<br><br>
+    ◆ 当前只可以发送文字，不考虑加入其它功能<br><br>
+    ◆ 底层使用WebSocket，绝不会记录你的任何聊天数据，如果感兴趣可以自行百度<br/><br/>
+    ◆ 这只是一个玩具，不要太过当真<br><br>
+</div>
+</body>
+<script src="js/utils/cookie.js"></script>
+<script src="js/index/chat.js"></script>
+<script>
+    /* 禁用右键菜单 */
+    document.oncontextmenu = function () {
+        return false;
+    };
+</script>
+</html>
